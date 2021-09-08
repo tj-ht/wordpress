@@ -142,21 +142,21 @@ define( 'DB_COLLATE', getenv_docker('WORDPRESS_DB_COLLATE', '') );
 
  */
 
-define( 'AUTH_KEY',         getenv_docker('WORDPRESS_AUTH_KEY',         '5f3b4f6d9dc4c41fdfd5a4456a2426dc6bcc8f4c') );
+define( 'AUTH_KEY',         getenv_docker('WORDPRESS_AUTH_KEY',         '221776fde120dcde2acb37c7c356843689f38ba2') );
 
-define( 'SECURE_AUTH_KEY',  getenv_docker('WORDPRESS_SECURE_AUTH_KEY',  '4539770e6d732438837251ef76aac07e128ba9e4') );
+define( 'SECURE_AUTH_KEY',  getenv_docker('WORDPRESS_SECURE_AUTH_KEY',  'b1b7e9b0705582b55262e24789f3e3644c3d899e') );
 
-define( 'LOGGED_IN_KEY',    getenv_docker('WORDPRESS_LOGGED_IN_KEY',    '36f5333dab189a764976933201476fd42ba8cbb2') );
+define( 'LOGGED_IN_KEY',    getenv_docker('WORDPRESS_LOGGED_IN_KEY',    '5fc50d6290e8896af0e0083fbe60c143bd97a621') );
 
-define( 'NONCE_KEY',        getenv_docker('WORDPRESS_NONCE_KEY',        'c81a68122a992a626c928dc9c78aeae91d0fb7cc') );
+define( 'NONCE_KEY',        getenv_docker('WORDPRESS_NONCE_KEY',        '7a415e08d4bfd352fac4ad655e43211af8c0654b') );
 
-define( 'AUTH_SALT',        getenv_docker('WORDPRESS_AUTH_SALT',        '219d8ded8ec29eabf4ff5097ead9c71f39498997') );
+define( 'AUTH_SALT',        getenv_docker('WORDPRESS_AUTH_SALT',        'fb1aff40168a9f4e7f0cd016c030666917759c4b') );
 
-define( 'SECURE_AUTH_SALT', getenv_docker('WORDPRESS_SECURE_AUTH_SALT', 'c38da8c411557b447609d6cdea6b0311556c2344') );
+define( 'SECURE_AUTH_SALT', getenv_docker('WORDPRESS_SECURE_AUTH_SALT', '116ec1c21d7740b1815bc5f1867eed695a042972') );
 
-define( 'LOGGED_IN_SALT',   getenv_docker('WORDPRESS_LOGGED_IN_SALT',   '8549dcc96f051ab47d011dbb3c497a78fcbae699') );
+define( 'LOGGED_IN_SALT',   getenv_docker('WORDPRESS_LOGGED_IN_SALT',   '95e7809c47d007a7c45fb17c5ae23efe809afc8d') );
 
-define( 'NONCE_SALT',       getenv_docker('WORDPRESS_NONCE_SALT',       '179f996f2848559894b491fb01930ee6b8047c45') );
+define( 'NONCE_SALT',       getenv_docker('WORDPRESS_NONCE_SALT',       '5aeb577aae867e10c63358a4d1ec86fb87a12b21') );
 
 // (See also https://wordpress.stackexchange.com/a/152905/199287)
 
@@ -203,15 +203,15 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
 
  */
 
-define( 'SCRIPT_DEBUG', true );
+define( 'SCRIPT_DEBUG', false );
 define( 'WP_ENVIRONMENT_TYPE', 'local' );
 define( 'WP_PHP_BINARY', 'php' );
 define( 'WP_TESTS_EMAIL', 'admin@example.org' );
 define( 'WP_TESTS_TITLE', 'Test Blog' );
-define( 'WP_TESTS_DOMAIN', 'http://localhost:8888/' );
-define( 'WP_SITEURL', 'http://localhost:8888/' );
-define( 'WP_HOME', 'http://localhost:8888/' );
-define( 'WP_DEBUG', true );
+define( 'WP_TESTS_DOMAIN', 'http://localhost:8889/' );
+define( 'WP_SITEURL', 'http://localhost:8889/' );
+define( 'WP_HOME', 'http://localhost:8889/' );
+define( 'WP_DEBUG', false );
 
 
 /* Add any custom values between this line and the "stop editing" line. */
