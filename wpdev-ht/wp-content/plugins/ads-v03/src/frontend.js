@@ -1,29 +1,42 @@
 import "./frontend.scss"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import ReactDOM from "react-dom"
+import { Client } from "@adzerk/decision-sdk"
 
-const divsToUpdate = document.querySelectorAll(".wrapper-div")
+let client = new Client({ networkId: 10797, siteId: 1167830 });
+let request = {
+  placements: [{ adTypes: [4] }],
+  user: { key: "abc" },
+  keywords: ["keyword1", "keyword2"]
+}
+
+const divsToUpdate = document.querySelectorAll(".adwrapper")
 
 divsToUpdate.forEach(div => {
-  const data = JSON.parse(div.querySelector("pre").innerText)
+    const data = JSON.parse(div.querySelector("pre").innerText)
   ReactDOM.render(<OurComponent {...data} />, div)
-  div.classList.remove("wrapper-div")
+  div.classList.remove("adwapper")
 })
 
 function OurComponent(props) {
-  const [showSkyColor, setShowSkyColor] = useState(false)
-  const [showGrassColor, setShowGrassColor] = useState(false)
+    
 
+  const [adData, setAdData] = useState()
+  useEffect(() => {
+    client.decisions.get(request).then(r => {
+        setAdData(r.decisions?.div0[0])
+        client.pixels.fire({ url: r.decisions?.div0[0].impressionUrl });
+client.pixels.fire({ url: decision.clickUrl }).then(r => {
+  console.log(`status ${r["status"]}; location: ${r["location"]}`);
+});
+      }).catch((error) => {
+          console.log('error', error)
+      })
+
+  }, [])
+ if(!adData) return null;
+ const {data, body} = adData.contents[0]
   return (
-    <div className="react-frontend">
-      <p>
-        <button onClick={() => setShowSkyColor(prev => !prev)}>Toggle view sky color</button>
-        {showSkyColor && <span>{props.skyColor}</span>}
-      </p>
-      <p>
-        <button onClick={() => setShowGrassColor(prev => !prev)}>Toggle view grass color</button>
-        {showGrassColor && <span>{props.grassColor}</span>}
-      </p>
-    </div>
+    <div dangerouslySetInnerHTML={{__html: body}} />
   )
 }

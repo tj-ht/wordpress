@@ -1,21 +1,21 @@
 <?php
 
 /*
-  Plugin Name: Brad&rsquo;s Boilerplate Block Plugin
-  Version: 1.0
-  Author: Brad
-  Author URI: https://github.com/LearnWebCode
+  Plugin Name: Kevel Ad Block V3
+  Version: 0.3
+  Author: HT
+  Author URI: https://github.com/
 */
 
 if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class BradsBoilerplate {
+class adApi {
   function __construct() {
     add_action('init', array($this, 'onInit'));
   }
-
   function onInit() {
-    wp_register_script('es6Scripts', plugin_dir_url(__FILE__) . 'build/index.js', array('wp-blocks', 'wp-element', 'wp-editor'));
+    //wp_register_script('es6Scripts', plugin_dir_url(__FILE__) . 'build/index.js', array('wp-blocks', 'wp-element', 'wp-editor'));
+    wp_register_script('es6Scripts', plugin_dir_url(__FILE__) . 'build/index.js', array('wp-blocks', 'wp-element'));
     wp_register_style('es6Styles', plugin_dir_url(__FILE__) . 'build/index.css');
     
     register_block_type('es6/reactads', array(
@@ -32,14 +32,14 @@ class BradsBoilerplate {
     }
 
     ob_start(); ?>
-    <div class="wrapper-div"><pre style="display: none;"><?php echo wp_json_encode($attributes) ?></pre></div>
+    <div class="adwrapper"><pre style="display: none;"><?php echo wp_json_encode($attributes) ?></pre></div>
     <?php return ob_get_clean();
     
   }
 
   function renderCallbackBasic($attributes) {
-    return '<div class="react-frontend">Hello, the sky is ' . $attributes['skyColor'] . ' and the grass is ' . $attributes['grassColor'] . '.</div>';
+    return '<div class="frontenddiv">Hello, the sky is ' . $attributes['skyColor'] . ' and the grass is ' . $attributes['grassColor'] . '.</div>';
   }
 }
 
-$bradsBoilerplate = new BradsBoilerplate();
+$adApi = new AdApi();

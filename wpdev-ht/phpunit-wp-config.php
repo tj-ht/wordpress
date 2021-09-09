@@ -142,21 +142,21 @@ define( 'DB_COLLATE', getenv_docker('WORDPRESS_DB_COLLATE', '') );
 
  */
 
-define( 'AUTH_KEY',         getenv_docker('WORDPRESS_AUTH_KEY',         '221776fde120dcde2acb37c7c356843689f38ba2') );
+define( 'AUTH_KEY',         getenv_docker('WORDPRESS_AUTH_KEY',         'd251c4f56b26cad251a0e740470b5e278e9d8f37') );
 
-define( 'SECURE_AUTH_KEY',  getenv_docker('WORDPRESS_SECURE_AUTH_KEY',  'b1b7e9b0705582b55262e24789f3e3644c3d899e') );
+define( 'SECURE_AUTH_KEY',  getenv_docker('WORDPRESS_SECURE_AUTH_KEY',  '9788a72ba64415f40bc283a97c2db4c4bc47ae53') );
 
-define( 'LOGGED_IN_KEY',    getenv_docker('WORDPRESS_LOGGED_IN_KEY',    '5fc50d6290e8896af0e0083fbe60c143bd97a621') );
+define( 'LOGGED_IN_KEY',    getenv_docker('WORDPRESS_LOGGED_IN_KEY',    'e502668df01c66c63f054daf3e08e7a565289a4a') );
 
-define( 'NONCE_KEY',        getenv_docker('WORDPRESS_NONCE_KEY',        '7a415e08d4bfd352fac4ad655e43211af8c0654b') );
+define( 'NONCE_KEY',        getenv_docker('WORDPRESS_NONCE_KEY',        '88407c46fa25fc8b6cfb24422d7697b33789e7a2') );
 
-define( 'AUTH_SALT',        getenv_docker('WORDPRESS_AUTH_SALT',        'fb1aff40168a9f4e7f0cd016c030666917759c4b') );
+define( 'AUTH_SALT',        getenv_docker('WORDPRESS_AUTH_SALT',        '297fac75e00c096b601271ad38e4bf6f2445af88') );
 
-define( 'SECURE_AUTH_SALT', getenv_docker('WORDPRESS_SECURE_AUTH_SALT', '116ec1c21d7740b1815bc5f1867eed695a042972') );
+define( 'SECURE_AUTH_SALT', getenv_docker('WORDPRESS_SECURE_AUTH_SALT', 'd9fc1f06500fae283cda0d10543ae8346006e6d4') );
 
-define( 'LOGGED_IN_SALT',   getenv_docker('WORDPRESS_LOGGED_IN_SALT',   '95e7809c47d007a7c45fb17c5ae23efe809afc8d') );
+define( 'LOGGED_IN_SALT',   getenv_docker('WORDPRESS_LOGGED_IN_SALT',   '61ccf9a19e16eb8fac38aaac17ff252cc0d24467') );
 
-define( 'NONCE_SALT',       getenv_docker('WORDPRESS_NONCE_SALT',       '5aeb577aae867e10c63358a4d1ec86fb87a12b21') );
+define( 'NONCE_SALT',       getenv_docker('WORDPRESS_NONCE_SALT',       'bd1a89011e74171451076b44ae97a48a94eb1855') );
 
 // (See also https://wordpress.stackexchange.com/a/152905/199287)
 
